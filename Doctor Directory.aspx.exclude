@@ -1,0 +1,15 @@
+<%@ Page Language="C#" MasterPageFile="~/SiteMaster.master" AutoEventWireup="true" CodeFile="Doctor Directory.aspx.cs" Inherits="Master_Doctor_Directory" Title="Doctor Directory" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="AjaxToolkit" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <div class="table-bordered">
+    <div class="form-control">
+                <AjaxToolkit:AutoCompleteExtender ID="PtntNm" runat="server" TargetControlID="txtEmpCode"
+                FirstRowSelected="true" ServiceMethod="GetEmpCode" ServicePath="WebService1.asmx"
+                MinimumPrefixLength="1" EnableCaching="true" CompletionInterval="10" CompletionListCssClass="AutoExtender"
+                CompletionListItemCssClass="AutoExtenderList" CompletionListHighlightedItemCssClass="AutoExtenderHighlight"
+                CompletionListElementID="divwidth"  >
+            </AjaxToolkit:AutoCompleteExtender>
+            </div>
+    </div>     
+</asp:Content>
+
